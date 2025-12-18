@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBook - Online Movie Ticket Reservation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🎬 CineBook</h1>
+            <p class="tagline">Your Premium Movie Experience</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Section 1: Movie Selection -->
+            <section id="movieSelection" class="section active">
+                <h2 class="section-title">Now Showing</h2>
+                <div class="movie-grid" id="movieGrid">
+                    <!-- Movies will be dynamically loaded here -->
+                </div>
+            </section>
+
+            <!-- Section 2: Seat Selection -->
+            <section id="seatSelection" class="section">
+                <div class="back-button-container">
+                    <button class="btn-back" id="backToMovies">← Back to Movies</button>
+                </div>
+                
+                <div class="movie-info" id="selectedMovieInfo">
+                    <!-- Selected movie details will appear here -->
+                </div>
+
+                <div class="cinema-container">
+                    <div class="screen">SCREEN</div>
+                    
+                    <div class="seat-legend">
+                        <div class="legend-item">
+                            <div class="seat available"></div>
+                            <span>Available</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="seat selected"></div>
+                            <span>Selected</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="seat occupied"></div>
+                            <span>Occupied</span>
+                        </div>
+                    </div>
+
+                    <div class="seats-grid" id="seatsGrid">
+                        <!-- Seats will be dynamically generated -->
+                    </div>
+                </div>
+
+                <div class="booking-summary">
+                    <div class="summary-item">
+                        <span>Seats Selected:</span>
+                        <strong id="seatsCount">0</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Total Price:</span>
+                        <strong id="totalPrice">$0</strong>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <form class="booking-form" id="bookingForm">
+                    <h3>Customer Details</h3>
+                    <div class="form-group">
+                        <label for="userName">Full Name *</label>
+                        <input type="text" id="userName" name="userName" placeholder="Enter your full name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">Email *</label>
+                        <input type="email" id="userEmail" name="userEmail" placeholder="your.email@example.com" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="userPhone">Phone Number *</label>
+                        <input type="tel" id="userPhone" name="userPhone" placeholder="+1 (555) 123-4567" required>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    <button type="submit" class="btn-primary" id="bookNowBtn" disabled>Book Now</button>
+                </form>
+            </section>
+
+            <!-- Section 3: Confirmation -->
+            <section id="confirmation" class="section">
+                <div class="confirmation-card">
+                    <div class="success-icon">✓</div>
+                    <h2>Booking Confirmed!</h2>
+                    <p class="success-message">Your tickets have been reserved successfully.</p>
+                    
+                    <div class="ticket">
+                        <div class="ticket-header">
+                            <h3>🎟️ E-Ticket</h3>
+                        </div>
+                        <div class="ticket-body" id="ticketDetails">
+                            <!-- Ticket details will be inserted here -->
+                        </div>
+                        <div class="ticket-footer">
+                            <p>Show this ticket at the counter</p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary" id="bookAnotherBtn">Book Another Movie</button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 PixelCinema. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Contact Us</a>
+                <a href="#" class="footer-link">Help & Support</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
