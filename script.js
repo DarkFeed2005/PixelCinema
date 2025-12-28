@@ -91,6 +91,15 @@ const moviesDatabase = [
         poster: "assets/The_Conjuring_–_Last_Rites.jpg", 
         showtimes: ["11:00 AM", "2:30 PM", "6:30 PM", "10:00 PM"]
     }
+    {
+        id: 9,
+        title: "The Housemaid",
+        genre: "Thriller",
+        duration: "131 min",
+        price: 1300,
+        poster: "assets/The_Conjuring_–_Last_Rites.jpg", 
+        showtimes: ["10:30 AM", "2:30 PM", "6:00 PM", "10:30 PM"]
+    }
 ];
 
 // ==================== STATE MANAGEMENT ====================
